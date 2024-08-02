@@ -84,5 +84,27 @@ public class WarmUp_1 {
             }
         }
 
-    }
+//NOTSTRING
+
+
+        /*I chose not to use .equals() so I did not have to count characters. using starts with I figured I could just check if it started with "not
+         if it did not start with "not", I just added "not " to str*/
+        public String notString(String str) {
+            if (str.startsWith("not")) {
+                return str;
+            } else {
+                return "not " + str;
+            }
+        }
+
+//MISSINGCHAR
+
+        //(0, n) to
+        public String missingChar(String str, int n) {
+            return str.substring(0, n) + str.substring(n + 1);
+        }
+
+
+
+}
 
