@@ -279,5 +279,81 @@ public class WarmUp_1 {
 
 
 
+
+//MIXSTART
+
+    public boolean mixStart(String str) {
+
+        if (str.length() <3) { //the string must contain at least 3 cahracters, this disqulaifies anything with less
+            return false;
+        }
+        String subStr = str.substring(1, 3); //gets the substring from indexes 1 and 2 as index 0 can be anything
+
+        return subStr.equals("ix"); // returns true if those indexes contain "ix"
+    }
+
+
+
+//STARTOZ
+
+    public String startOz(String str) {
+        String result = ""; //result variable, initializes an empty string
+
+
+        if (str.length() >= 1) {  //check if the string length is at least 1
+
+            if (str.charAt(0) == 'o') { //includes the first character if it is 'o'
+                result += 'o';
+            }
+        }
+
+
+        if (str.length() >= 2) {    //check if the string length is at least 2
+
+            if (str.charAt(1) == 'z') { //includes the second character if it is 'z'
+                result += 'z';
+            }
+        }
+
+        return result;
+    }
+
+
+
+//INTMAX
+
+    public int intMax(int a, int b, int c) {
+        int largest = a; //sets and assumes this parameter as the largest
+
+        if (b > largest) { // checks to see if be is larger than largest (a)
+            largest = b; //if so, b is updated to the largest
+        }
+
+        if (c > largest) { //check to see if c is larger than largest/new largest
+            largest = c; //if so, c is updated to the largest
+        }
+
+        return largest;
+    }
+
+
+//CLOSE10
+
+    public int close10(int a, int b) {
+
+
+        int differenceA = Math.abs(a- 10);//gets the absolute difference between a and 10
+        int differenceB = Math.abs(b- 10);// same as above for b
+
+        if (differenceA < differenceB) { //if the difference of a-10 is smaller and b-10
+            return a; //returns that a is nearest to the value of 10
+        } else if (differenceA > differenceB) { //if the difference of a- 10 is larger tha b-10
+            return b;// returns b is nearest tp the value of 10
+        } else { // if there is no difference then return 0
+            return 0;
+        }
+    }
+
+
 }
 
